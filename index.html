@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Redirecting...</title>
+    <script>
+     // Ambil semua parameter dari URL
+      const params = new URLSearchParams(window.location.search);
+
+      const in1 = params.get("in1");
+      const start = params.get("start");
+      const end = params.get("end");
+
+      // Buat URL tujuan dengan parameter
+      const targetURL = `https://personal-fybgkiun.outsystemscloud.com/biaa/download?In1=${encodeURIComponent(in1)}&start=${encodeURIComponent(start)}&end=${encodeURIComponent(end)}`;
+
+      // Redirect otomatis
+      window.location.href = targetURL;
+    </script>
+  </head>
+  <body>
+    <p>Redirecting... If not redirected, <a id="manual-link" href="#">click here</a>.</p>
+    <script>
+      document.getElementById("manual-link").href = targetURL;
+    </script>
+  </body>
+</html>
