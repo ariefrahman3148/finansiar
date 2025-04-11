@@ -7,13 +7,16 @@
      // Ambil semua parameter dari URL
       const params = new URLSearchParams(window.location.search);
 
+      const trg = params.get("trg");
       const in1 = params.get("in1");
       const start = params.get("start");
       const end = params.get("end");
 
-      // Buat URL tujuan dengan parameter
-      const targetURL = `https://personal-fybgkiun.outsystemscloud.com/biaa/download?In1=${encodeURIComponent(in1)}&start=${encodeURIComponent(start)}&end=${encodeURIComponent(end)}`;
-
+      if(trg == "View"){
+      const targetURL = `https://personal-fybgkiun.outsystemscloud.com/biaa/View?In1=${encodeURIComponent(in1)}`;
+      } else
+      const targetURL = `https://personal-fybgkiun.outsystemscloud.com/biaa/Donwload?In1=${encodeURIComponent(in1)}&start=${encodeURIComponent(start)}&end=${encodeURIComponent(end)}`;
+      }
       // Redirect otomatis
       window.location.href = targetURL;
     </script>
