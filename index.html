@@ -12,7 +12,7 @@
       const start = params.get("start");
       const end = params.get("end");
 
-      if(trg == "View"){
+      if(trg == params.get("trg")){
       const targetURL = `https://personal-fybgkiun.outsystemscloud.com/biaa/View?In1=${encodeURIComponent(in1)}`;
       } else
       const targetURL = `https://personal-fybgkiun.outsystemscloud.com/biaa/Donwload?In1=${encodeURIComponent(in1)}&start=${encodeURIComponent(start)}&end=${encodeURIComponent(end)}`;
